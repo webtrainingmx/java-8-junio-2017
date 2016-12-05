@@ -1,0 +1,14 @@
+# Java 8 course
+
+A set of classes that shows the upgrades in Java 8
+
+##themes
+
+1. Lambda
+2. Method references
+3. Functional interfaces
+4. Default methods
+5. Streams
+6. Optional Class
+7. Date/Time API
+8. Base64
