@@ -28,10 +28,14 @@ public class AnonymousClass {
         };
 
 
-        System.out.println("10 + 5 = " + addition.operation(10,5) );
-        System.out.println("10 - 5 = " + subtraction.operation(10,5));
-        System.out.println("10 x 5 = " + multiplication.operation(10, 5));
-        System.out.println("10 / 5 = " + division.operation(10, 5));
+        System.out.println("10 + 5 = " + operate(10, 5, addition ) );
+        System.out.println("10 - 5 = " + operate(10, 5, subtraction ));
+        System.out.println("10 x 5 = " + operate(10, 5, multiplication ));
+        System.out.println("10 / 5 = " + operate(10, 5, division ));
+    }
+
+    public int operate(int a, int b, MathOperation mathOperation){
+        return mathOperation.operation(a, b);
     }
 
 

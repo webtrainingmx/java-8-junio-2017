@@ -15,18 +15,19 @@ public class SortingList {
         List<Integer> list = Arrays.asList(4,5,2,6,1,3);
         System.out.println("unsorted list: " + list);
 
-        Collections.sort(list,(a,b)-> a - b );
+        OrderBy orderBy = new OrderBy();
+        Collections.sort(list,orderBy);
         System.out.println("ascending list: "+list);
 
         Collections.sort(list,(a,b)-> b - a );
         System.out.println("descending list: "+list);
     }
 
-    public class orderBy implements Comparator<Integer>{
+    public class OrderBy implements Comparator<Integer>{
 
         @Override
-        public int compare(Integer o1, Integer o2) {
-            return 0;
+        public int compare(Integer a, Integer b) {
+            return a-b;
         }
     }
 }
