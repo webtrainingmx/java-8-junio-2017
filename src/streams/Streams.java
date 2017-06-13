@@ -43,7 +43,10 @@ public class Streams {
 
     public void collector(){
         List<String>strings = Arrays.asList("abc", "", "bc", "efg", "abcd","", "jkl");
-        List<String> filtered = strings.stream().filter(string -> !string.isEmpty()).map(String::toUpperCase).collect(Collectors.toList());
+        List<String> filtered = strings.stream()
+                .filter(string -> !string.isEmpty())
+                .map(String::toUpperCase)
+                .collect(Collectors.toList());
 
         System.out.println( filtered );
         System.out.println();

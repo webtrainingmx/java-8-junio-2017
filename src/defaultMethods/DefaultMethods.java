@@ -28,8 +28,6 @@ public class DefaultMethods {
 
         @Override
         public void print() {
-            Motorcycle.super.print();
-            Honda.super.print();
             System.out.println("I'm a valkyrie");
         }
     }

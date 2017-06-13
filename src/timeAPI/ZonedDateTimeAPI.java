@@ -9,11 +9,13 @@ import java.time.ZonedDateTime;
 public class ZonedDateTimeAPI {
     public static void main(String args[]){
         ZonedDateTimeAPI zonedDateTimeAPI = new ZonedDateTimeAPI();
+        zonedDateTimeAPI.init();
     }
 
     public void init(){
         ZonedDateTime date1 = ZonedDateTime.now();
         System.out.println("date1: " + date1);
+        date1.hashCode();
 
         ZoneId id = ZoneId.of("Europe/Paris");
         System.out.println("ZoneId: " + id);

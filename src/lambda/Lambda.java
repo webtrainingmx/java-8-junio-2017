@@ -27,13 +27,12 @@ public class Lambda {
         System.out.println("10 - 5 = " + operate(10, 5, subtraction));
         System.out.println("10 x 5 = " + operate(10, 5, multiplication));
         System.out.println("10 / 5 = " + operate(10, 5, division));
+        System.out.println("5 / 10 = " + operate(10, 5, (a,b) -> b / a ) );
     }
 
     private int operate(int a, int b, MathOperation mathOperation){
         return mathOperation.operation(a, b);
     }
-
-
 
     public interface MathOperation {
         public int operation(int a, int b);

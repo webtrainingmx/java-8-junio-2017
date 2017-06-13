@@ -20,18 +20,16 @@ public class AnonymousClass {
             }
         };
 
-        MathOperation division = new MathOperation() {
-            @Override
-            public int operation(int a, int b) {
-                return a / b ;
-            }
-        };
-
 
         System.out.println("10 + 5 = " + operate(10, 5, addition ) );
         System.out.println("10 - 5 = " + operate(10, 5, subtraction ));
         System.out.println("10 x 5 = " + operate(10, 5, multiplication ));
-        System.out.println("10 / 5 = " + operate(10, 5, division ));
+        System.out.println("10 / 5 = " + operate(10, 5, new MathOperation() {
+            @Override
+            public int operation(int a, int b) {
+                return a / b ;
+            }
+        }));
     }
 
     public int operate(int a, int b, MathOperation mathOperation){
